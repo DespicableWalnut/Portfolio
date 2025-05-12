@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Immersive About Page</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="{{ url_for('static', filename='intro.css') }}">
+</head>
+<body>
+  <section class="sec"></section>
+  <div class="content-block">
+    <h1 class="body-header">Introduction</h1>
+    <div class="line"></div>
+    <img src="static/images/me2.jpg" alt="slim picture of your supreme overlord" class="me">
+    <div class="container">
+      <div class="body-text">
+        <h2>William Snellings</h2>
+        <h2>8A English</h2>
+        <h3>March 3rd</h3>
+        <h2>Research</h2>
+        <h1>Will Artificial Intelligence Take Over the World?</h1>
+        <p>Will AI take over the world? From what I have concluded, yes it will, and there are many different outcomes. These outcomes could be the Disney movie <em>Wall-E</em> becomes nonfiction, AI creates global tension by sending fake messages to other countries, people could use AI to control other groups of people. My personal favorite one of these outcomes is <em>Wall-E</em> becoming historically accurate.</p>
+        <p>In BBC’s article <em>“Artificial Intelligence could lead to extinction, experts warn,”</em> it shows what “experts” think, however, this article speaks of the human race becoming dependent on AI and controlling our lives. This is important because there is evidence of this already beginning. One example of this is AI toasters; I say AI toasters because one exists, and it also shows how we are putting AI in about every product imaginable. One of the things a fellow human does not need is a personal AI assistant to toast your bread for you, and if humans get used to stuff like this they will not only be like the people from the <em>Wall-E</em> movie but also be in the same shape of a person from <em>Wall-E</em>, which is not a good thing. The bigger problem would be if there were to be a time where an AI-dependent human loses access to this tool, they will have no idea what to do, and go mad. It would be like how most people who like to consume content on their smartphones would go bananas if they lost their phone, but they wouldn’t if they had never had one to begin with.</p>
+        <p>The scariest outcome is AI getting involved in war activities. The thing about AI is that it does not have feelings, fears, or the ability to feel pain, meaning that it will go through whatever it takes to complete its objective, even if they are destroyed in the process. The only loss of using AI for warfare is financial, so there isn’t that much to lose compared to current soldiers. AI would make little to no mistakes on the battlefield and do whatever it’s told with no guilt or mercy, making it very dangerous to any of its human targets.</p>
+        <p>One of the most likely outcomes is people taking away other people’s access to AI tools, and using it for controlling everyone below them. If one were to restrict access to such a tool, they could create monopolies, use it for warfare, or technologically upgrade faster than every other country or group, becoming supreme to everyone else.</p>
+        <p>For now, however, this is not a topic to worry about, but it is in my opinion one to think about. By the time AI develops enough to take everyone’s jobs away, we might not even exist anymore. One can only hope that what awaits in the future is positive, so it is always better to be safe than sorry.</p>
+      </div>
+    <div class="body-text">
+      <h1>About The Author</h1>
+      <p>
+        My name is William, and I’m an 8th grader at Atlanta Academy.
+        
+        I first got interested in computer science because I wanted to make cool games. Over time, I started learning different programming languages like JavaScript and Python. One project I’m especially proud of is something I made when I was bored. It was a simple terminal interface with a login system, a menu for choosing games, and a few fun Python-based games. Even though it wasn’t very advanced, it helped me be creative and understand coding better.
+        
+        I’ve also joined Hackathons and Game Jams, where I explored areas like game development and AI. Even though I was still new to these topics, I got to learn a lot in their supportive environments. These events helped me learn in a fun and supportive way.
+        
+        My dad has had a big influence on me, too. He doesn’t work in IT directly, but his company helps place IT workers in other companies. He’s given me advice on what to learn and helped me sign up for programs and get a coding instructor.
+        
+        Besides programming, I also enjoy soldering PCB boards. It teaches me about electronics and how the tech I use works. I also have a small interest in politics and enjoy learning about history, but most of my hobbies are tech-related. I’ve also started to like web development because of this project.
+        
+        In the future, I want to become a software engineer and go to Georgia Tech. I want to go to Georgia Tech because it’s close and it has strong tech and engineering programs.
+      </p>
+    </div>
+    </div>
+    <div class="list-of-skills">
+        <h2>My Skills</h2>
+        <ul>
+          <li>Python - basics, scripting, Artificial Intelligence, and small game development</li>
+          <li>JavaScript - DOM manipulation, basic interactivity</li>
+          <li>Web Development - HTML, CSS, Flask</li>
+          <li>Electronics - basic soldering and circuit board work</li>
+          <li>AI Concepts - understanding of language models and ethical concerns</li>
+          <li>Game Design - prototyping small games and participating in Game Jams</li>
+          <li>Cross Country </li>
+          <li>Problem Solving - debugging, logical thinking, and creative coding</li>
+        </ul>
+        <h2>Purpose of This Project</h2>
+        <p>
+          This website serves as a creative and technical showcase of everything I’ve learned this year—from research writing to hands-on coding and design. I wanted to build something that mixes creativity with logic, and reflects how much I’ve grown as a student, developer, and thinker.
+        </p>
+</div>
+
+  </div>
+  
+  <script>
+    for (let i = 1; i <= 2000; i++) {
+      let box = document.createElement('div');
+      box.classList.add('box');
+      document.querySelector('.sec').appendChild(box);
+    }
+
+    function animateBox() {
+      let boxes = document.querySelectorAll('.box');
+      let num = Math.floor(Math.random() * boxes.length);
+      boxes[num].classList.toggle('animate');
+    }
+    function loop() {
+      animateBox();
+      requestAnimationFrame(loop);
+      }
+    requestAnimationFrame(loop);
+
+
+    setInterval(animateBox, 0.1);
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang = en>
+    <head>
+        <meta charset="UTF-8">
+        <title>The Immersive Homepage</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+       
+    </head>
+    <body>
+        <div class="container">
+            <div class="bubbles">
+            
+            <span style="--1:11;"></span>
+            <span style="--1:12;"></span>
+            <span style="--1:24;"></span>
+            <span style="--1:10;"></span>
+            <span style="--1:14;"></span>
+            <span style="--1:23;"></span>
+            <span style="--1:18;"></span>
+            <span style="--1:16;"></span>
+            <span style="--1:19;"></span>
+            <span style="--1:20;"></span>
+            <span style="--1:22;"></span>
+            <span style="--1:25;"></span>
+            <span style="--1:18;"></span>
+            <span style="--1:21;"></span>
+            <span style="--1:15;"></span>
+            <span style="--1:13;"></span>
+            <span style="--1:26;"></span>
+            <span style="--1:17;"></span>
+            <span style="--1:13;"></span>
+            <span style="--1:28;"></span>
+            
+            <span style="--1:28;"></span>
+            <span style="--1:13;"></span>
+            <span style="--1:17;"></span>
+            <span style="--1:26;"></span>
+            <span style="--1:13;"></span>
+            <span style="--1:15;"></span>
+            <span style="--1:21;"></span>
+            <span style="--1:18;"></span>
+            <span style="--1:25;"></span>
+            <span style="--1:22;"></span>
+            <span style="--1:20;"></span>
+            <span style="--1:19;"></span>
+            <span style="--1:16;"></span>
+            <span style="--1:18;"></span>
+            <span style="--1:23;"></span>
+            <span style="--1:14;"></span>
+            <span style="--1:10;"></span>
+            <span style="--1:24;"></span>
+            <span style="--1:12;"></span>
+            <span style="--1:11;"></span>
+            
+            <span style="--1:11;"></span>
+            <span style="--1:12;"></span>
+            <span style="--1:24;"></span>
+            <span style="--1:10;"></span>
+            <span style="--1:14;"></span>
+            <span style="--1:23;"></span>
+            <span style="--1:18;"></span>
+            <span style="--1:16;"></span>
+            <span style="--1:19;"></span>
+            <span style="--1:20;"></span>
+            <span style="--1:22;"></span>
+            <span style="--1:25;"></span>
+            <span style="--1:18;"></span>
+            <span style="--1:21;"></span>
+            <span style="--1:15;"></span>
+            <span style="--1:13;"></span>
+            <span style="--1:26;"></span>
+            <span style="--1:17;"></span>
+            <span style="--1:13;"></span>
+            <span style="--1:28;"></span>
+
+            </div>
+            <div class="button-wrapper">
+                <h1 class="header">Welcome To the Immersive William Experience</h1>
+                <img src="static/images/one_word.jpg" alt="one word" class="center-image">
+                <div class="button-container">
+                    <button class="neon-button" onclick="goToNextPage('intro')">Introduction</button>
+                    <button class="neon-button" onclick="goToNextPage('growth')">My Growth</button>
+                    <button class="neon-button" onclick="goToNextPage('essays')">Final Exams</button>
+                    <button class="neon-button" onclick="goToNextPage('future')">The Future</button>
+                    <button class="neon-button" onclick="goToNextPage('works-cited')">Works Cited</button>
+                </div>
+                <div class="update-log">
+                    <h3>Update Log</h3>
+                    <ul>
+                      <li><strong>2025-04-16:</strong> Created website</li>
+                    </ul>
+                  </div>
+                <img src="static/images/profile.jpg" alt="slim picture of your supreme overlord" class="side-photo">
+                <script>
+                    const button = document.querySelector('.buttonwrapper');
+
+                    button.addEventListener('click', () => {
+                        document.body.classList.add('white-transition');
+                        button.classList.add('clicked');
+                        });
+
+                    function goToNextPage(direct) {
+                        document.body.classList.add('white-transition');
+                        setTimeout(() => {
+                        window.location.href = direct;
+                    }, 1); 
+                    }
+                </script>
+             </div>
+        </div>     
+        <footer>
+            <p>My Other Works</p>
+            <a href="https://github.com/DespicableWalnut" target="_blank" class="footer">GitHub</a> |
+        </footer> 
+    </body>
+</html>

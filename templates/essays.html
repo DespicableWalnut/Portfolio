@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Immersive Essay Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='essays.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+</head>
+<body>
+    <video autoplay muted loop id="bg-video">
+        <source src="{{ url_for('static', filename='images/space.mp4') }}" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <h1 class="header">My Final Exams</h1>
+
+    <div class="button-container">
+        <button onclick="toggleExam('history-exam')">Historical References</button>
+        <button onclick="toggleExam('believe-exam')">This I Believe</button>
+        <button onclick="toggleExam('graduation-exam')">The Graduation Speech</button> 
+    </div>
+
+    <div class="exam-container">
+        <div id="history-exam" class="exam full-page">
+            <button class="exit-button" onclick="toggleExam('')">Exit</button>
+            <div class="png-container">
+                <img src="static/images/WorldHistory/1.png" alt="Image 1">
+                <img src="static/images/WorldHistory/2.png" alt="Image 2">
+                <img src="static/images/WorldHistory/3.png" alt="Image 3">
+            </div>
+
+        </div>
+
+
+        <div id="believe-exam" class="exam full-page">
+            <button class="exit-button" onclick="closeAllExams()">Exit</button>
+            <div class="png-container" style="text-align: center;">
+                <img class="qr-code" src="static/images/English.png" alt="QR Code">
+                <img src="static/images/TIBAE/1.png" alt="Essay Page 1">
+                <img src="static/images/TIBAE/2.png" alt="Essay Page 2">
+            </div>
+        </div>
+
+
+        <div id="graduation-exam" class="exam full-page">
+            <button class="exit-button" onclick="closeAllExams()">Exit</button>
+             <div class="png-container" style="text-align: center;">
+                <img class="qr-code" src="static/images/English.png" alt="QR Code">
+                <img src="static/images/WBM/1.png" alt="Essay Page 1">
+                <img src="static/images/WBM/2.png" alt="Essay Page 2">
+            </div>
+        </div>
+    </div>
+<script>
+   function toggleExam(id) {
+    document.querySelectorAll('.exam').forEach(div => {
+        div.classList.remove('active');
+    });
+
+    if (id) {
+        document.getElementById(id).classList.add('active');
+        document.querySelector('.button-container').style.zIndex = '0'; // Send buttons back
+    } else {
+        document.querySelector('.button-container').style.zIndex = '100'; // Bring buttons to front
+    }
+    }
+
+    function closeAllExams() {
+        document.querySelectorAll('.exam').forEach(div => div.classList.remove('active'));
+        document.querySelector('.button-container').style.zIndex = '100'; // Bring buttons to front
+    }
+</script>
+</body>
+</html>

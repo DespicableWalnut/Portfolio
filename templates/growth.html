@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Immersive Growth Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='growth.css') }}">
+</head>
+<body>
+    <button id="Go-dark" style="display: block; margin: 40px auto;">View Work</button>
+
+    <div class="content-block">
+        <div class="content" id="content">
+            <h1 class="header">My Growth</h1>
+            <p id="growth-intro">
+                I have grown a lot at <strong>Atlanta Academy</strong> over the years.
+                This school has a wonderful learning environment for all minds to learn together.
+                My wonderful teachers helped me expand on my hobbies and interests.
+            </p>
+            <p>
+                Before attending this school, I had little knowledge of computer science, but now, I'm actively learning how to program and build websites.
+            </p>
+            <p>
+                After completing projects in HTML, CSS, and Python, I can confidently say I've gained valuable skills that continue to shape my career goals. My confidence in coding has skyrocketed, and I’m excited to see how much further I can go.
+            </p>
+        </div>
+
+        <div class="content hidden" id="newContent">
+            <h2 class="header">My Work</h2>
+
+            <div class="work-container">
+                <div class="about-work">
+                    <h2 class="header">Past Work</h2>
+                    <h2 style="text-align:center;">John and the Parachute</h2>
+                    <p>There once was a man named John and his only goal in life was to jump out of a plane and skydive. John’s dad had once been a professional skydiver but on one fateful day, John’s very own dad was struck by lightning and then lost in a very vicious storm where he was never ever seen again, besides his bright orange parachute that had surfaced two years after his disappearance.</p>
+                    <p>John’s dad’s parachute was later given to John where he framed it unevenly and hung it unevenly too. John would look at this parachute every single night, until one day when John thought, what is the purpose of just looking at it every night when I can use it for a single night?</p>
+                    <p>After thinking for a while, John went online where he began a Facetime call to his boss, travel advisor, and financial advisor all at once to tell them that he was going on a vacation! He then spent the next couple of hours planning and packing, deciding what he was going to bring. “I need my bright orange parachute, my ski mask, my thick black winter clothing, and my big black backpack.”</p>
+                    <p>The very next day, John drove to O’Hare International Airport and boarded flight 191, which would take him to Los Angeles from Chicago. His flight would be roughly four hours, so he just intensely stared at the Lego Batman movie that was playing on the seat in front of him to eradicate his boredom.</p>
+                    <p>After an hour or two, John heard a loud boom. He quickly pointed his head at the engine, and it was gone. Not just the engine was gone though, but the entire wing itself. John quickly brought his attention to his backpack, opened it, and put all of his amazing skydiving equipment on. He then used all of his strength to pull the lever and open the door. He hopped and dove quickly through the air towards the surface. Before landing, he pulls the parachute string and the parachute leaps out of his bag, and he sticks an awesome landing on the cold mountain surface.</p>
+                </div>
+                <div class="about-work">
+                    <h2 class="header">Recent Work</h2>
+                    <img src="static/works/textbookExample.png" alt="new work" class="work">
+                </div>
+            </div>
+
+            <div class="oldwork">
+                <h3 class="header">What This Shows</h3>
+                <p>Since the start of 8th grade, I’ve come a long way in both my personal and academic development. Over the years, I’ve learned how to manage my time better, handle challenges more effectively, and become more confident in my abilities. The progress I’ve made isn’t just about learning new skills or completing projects — it’s about becoming more self-aware and motivated. I’ve learned to embrace mistakes as opportunities to grow and to push through obstacles instead of giving up. This journey has shown me that growth isn’t just about the end result, but about the effort and persistence it takes to get there.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("Go-dark").addEventListener("click", function () {
+            document.body.classList.toggle("dark");
+            document.getElementById("content").classList.toggle("hidden");
+            document.getElementById("newContent").classList.toggle("hidden");
+        });
+    </script>
+</body>
+</html>

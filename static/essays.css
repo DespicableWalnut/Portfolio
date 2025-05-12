@@ -1,0 +1,144 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+    color: white;
+}
+
+.png-container img.qr-code {
+    width: 200px;
+    height: auto;
+    align-self: center;
+    margin: 20px auto;
+}
+
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.header {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 60px;
+    font-family: 'Audiowide', sans-serif;
+    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff;
+    color: aqua;
+    z-index: 1;
+}
+
+.button-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    z-index: 100;
+    text-align: center;
+}
+.png-container {
+  height: auto;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+.png-container img {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.button-container button {
+    background-color: #00FFFF;
+    color: #000000;
+    padding: 15px 30px;
+    font-size: 20px;
+    border: 2px solid #00FFFF;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-family: 'Audiowide', sans-serif;
+    box-shadow: 0 4px 10px rgba(0, 255, 255, 0.3);
+    z-index: 101; /* Initial z-index */
+}
+
+.button-container button:hover {
+    background-color: #000000;
+    color: #00FFFF;
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 255, 255, 0.5);
+}
+
+.button-container button:focus {
+    outline: none;
+    border-color: #FF00FF;
+}
+
+.button-container button:disabled {
+    background-color: #444444;
+    color: #888888;
+    cursor: not-allowed;
+    border: 2px solid #666666;
+}
+
+.exam-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.exam {
+    display: none;
+}
+
+.exam.full-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.95);
+    color: white;
+    padding: 40px;
+    z-index: 1000;
+}
+
+.exam.full-page.active {
+    display: block;
+}
+
+.exit-button {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: crimson;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 6px;
+    z-index: 1001;
+}
