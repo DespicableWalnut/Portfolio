@@ -1,5 +1,5 @@
-Flask==2.2.2
-flask-socketio==5.2.0
-paramiko==2.9.1
-markdown==3.3.6
-gunicorn==20.1.0
+Flask==2.3.3
+Werkzeug==2.3.0
+markdown
+paramiko
+flask_socketio
